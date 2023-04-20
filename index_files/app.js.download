@@ -1,0 +1,327 @@
+(function($) {
+
+    $(document).ready(function() {
+
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() >= 500) {
+                $('.scroll-to-top').addClass('show');
+            } else {
+                $('.scroll-to-top').removeClass('show');
+            }
+        });
+       /* $('.scroll-to-top').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+        });*/
+
+        $('#menu-toggle').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $($(this).data('toggle')).toggleClass('active');
+        });
+
+        $('.elementor-swiper-button').each(function() {
+            var _this = $(this),
+                _icon = _this.find('i');
+
+            if (!_icon) {
+                return
+            }
+
+            if (_icon.hasClass('eicon-chevron-left')) {
+                _this.empty();
+                _this.append('<i class="elementor-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="currentColor"><g transform="translate(48)"><path d="M-1.006,22a1.02,1.02,0,0,0,.72-.3,1,1,0,0,0,0-1.4l-9.3-9.3,9.3-9.3a1,1,0,0,0,0-1.4A1,1,0,0,0-1,0a1,1,0,0,0-.71.3l-10,10a.96.96,0,0,0-.3.7.96.96,0,0,0,.3.7l10,10A.98.98,0,0,0-1.006,22Z" transform="translate(-18.994 13.004)"></path></g></svg></i>')
+            }
+
+            if (_icon.hasClass('eicon-chevron-right')) {
+                _this.empty();
+                _this.append('<i class="elementor-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><g><path d="M10,17.5a.51.51,0,0,1-.36-.15.5.5,0,0,1,0-.7L14.29,12,9.64,7.35a.5.5,0,0,1,0-.7.5.5,0,0,1,.71,0l5,5a.48.48,0,0,1,0,.7l-5,5A.49.49,0,0,1,10,17.5Z"></path></g></svg></i>')
+            }
+
+        });
+
+        var history = [];
+        var number = 0;
+
+        function showPopup(id = false) {
+            number = number + 1;
+		    var title = null;
+		 
+		    var dataState = {
+		        id : number,
+		        popup: id,
+		        show: true
+		    };
+
+		    console.log(dataState)
+
+		    history.push(dataState);
+		 
+		    window.history.pushState(dataState, title);
+            // window.history.pushState("forward", null, "");
+        }
+
+        function hidePopup(event = null) {
+        	if (event) {
+	        	var id = event.popup
+	            $(`#elementor-popup-modal-${id} .dialog-close-button`).click();
+	            return
+        	}
+
+        	$('.elementor-popup-modal .dialog-close-button').click();
+        }
+
+        $(document).on('elementor/popup/show', function(event, id, instance) {
+            showPopup(id);
+        });
+
+        window.onpopstate = function(event) {
+    	 	console.log(event.state)
+            hidePopup(event.state);
+        };
+        
+		$( document ).on( 'elementor/popup/hide', function(event, id, instance) {
+		    // window.history.back();
+		    // hidePopup(id);
+		} );
+
+    });
+
+    var PostSlider = function($scope, $) {
+
+        var elem = $scope.find('.swiper-container').eq(0);
+
+        if (!elem) {
+            return
+        }
+
+        var _dataOption = elem.data('option') || {}
+
+        var pagination = $scope.find('.swiper-pagination');
+        var navprev = $scope.find('.elementor-swiper-button-prev');
+        var navnext = $scope.find('.elementor-swiper-button-next');
+
+
+        var option = $.extend(true, {
+            // dir: 'ltr',
+            loop: true,
+            spaceBetween: 32,
+            slidesPerView: 1,
+            pagination: {
+                el: pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: navnext,
+                prevEl: navprev,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            lazy: true,
+            breakpoints: {
+                // when window width is >= 640px
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        }, _dataOption);
+
+        if (elem.length > 0) {
+            var swiper = new Swiper(elem, option);
+        }
+    }
+
+    var TeamSlider = function($scope, $) {
+
+        var elem = $scope.find('.team-wrapper').eq(0);
+
+        var _dataOption = elem.data('option') || {}
+
+        var pagination = $scope.find('.swiper-pagination');
+        var navprev = $scope.find('.elementor-swiper-button-prev');
+        var navnext = $scope.find('.elementor-swiper-button-next');
+
+
+        var option = $.extend(true, {
+            loop: true,
+            spaceBetween: 32,
+            slidesPerView: 1,
+            pagination: {
+                el: pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: navnext,
+                prevEl: navprev,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            lazy: true,
+            breakpoints: {
+                // when window width is >= 640px
+                768: {
+                    slidesPerView: 2
+                },
+                1024: {
+                    slidesPerView: 3
+                }
+            }
+        }, _dataOption);
+
+        if (elem.hasClass('swiper-container') > 0) {
+            var swiper = new Swiper(elem, option);
+        }
+
+        if ( ! _dataOption.hasOwnProperty('show_popup') || ! _dataOption.show_popup ) {
+            return;
+        }
+
+
+        var teamPopup = $('.team-popup');
+
+        $('.team-item').each(function() {
+            var _this = $(this);
+
+            var show = false;
+
+            _this.on('click', function(e) {
+				if($(e.target).prop('tagName') == 'A') {
+				   return;
+				}
+                e.preventDefault();
+				
+
+                var heading = _this.find('.item-heading').text(),
+                    desc = _this.find('.item-desc').text(),
+                    level = _this.find('.meta-level').text(),
+                    exp = _this.find('.meta-exp').text(),
+                    text = _this.find('.item-text').text(),
+                    img = _this.find('.item-thumbnail-link').data('img');
+
+                teamPopup.find('.item-heading').text(heading);
+                teamPopup.find('.meta-title').text(desc);
+                teamPopup.find('.meta-level').text(level);
+                teamPopup.find('.meta-exp').text(exp);
+                teamPopup.find('.item-text').text(text);
+
+                teamPopup.find('.item-thumbnail').html(`<img src="${img}">`);
+
+                teamPopup.addClass('active')
+                $('body').addClass('dialog-prevent-scroll')
+            })
+        });
+        teamPopup.find('.backdrop, .eicon-close').on('click', function(e) {
+            e.preventDefault();
+
+            teamPopup.removeClass('active');
+            $('body').removeClass('dialog-prevent-scroll')
+
+            teamPopup.find('.item-heading').empty();
+            teamPopup.find('.meta-title').empty();
+            teamPopup.find('.meta-level').empty();
+            teamPopup.find('.meta-exp').empty();
+            teamPopup.find('.item-text').empty();
+
+            teamPopup.find('.item-thumbnail').empty();
+        })
+    }
+
+    var Slider = function($scope, $) {
+
+        var elem = $scope.find('.swiper-container').eq(0);
+
+        if (!elem) {
+            return
+        }
+
+        var _dataOption = elem.data('option') || {}
+
+        var pagination = $scope.find('.swiper-pagination');
+        var navprev = $scope.find('.elementor-swiper-button-prev');
+        var navnext = $scope.find('.elementor-swiper-button-next');
+
+
+        var option = $.extend(true, {
+            loop: true,
+            spaceBetween: 32,
+            slidesPerView: 1,
+            pagination: false,
+            navigation: {
+                nextEl: navnext,
+                prevEl: navprev,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: true
+            },
+            lazy: true,
+        }, _dataOption);
+
+        if (elem.length > 0) {
+            var swiper = new Swiper(elem, option);
+        }
+
+    }
+
+    var IconBox = function($scope, $) {
+
+        var items = $scope.find('.iconbox-item')
+
+        if (!items) {
+            return
+        }
+
+        var iconBoxPopup = $('.iconbox-popup');
+
+        items.each(function () {
+        	var _this = $(this);
+        	_this.on('click', function () {
+        		var popupContent = _this.find('.item-text').clone();
+        		iconBoxPopup.find('.popup-inner').empty();
+        		iconBoxPopup.find('.popup-inner').append(popupContent);
+        		iconBoxPopup.find('.item-text').removeClass('elementor-hidden')
+
+        		iconBoxPopup.addClass('active')
+        		$('body').addClass('dialog-prevent-scroll')
+        	})
+        })
+
+        iconBoxPopup.find('.backdrop, .eicon-close').on('click', function(e) {
+            e.preventDefault();
+
+            iconBoxPopup.removeClass('active');
+            $('body').removeClass('dialog-prevent-scroll');
+        })
+
+    }
+
+
+
+    // Run this code under Elementor.
+    $(window).on('elementor/frontend/init', function() {
+        elementorFrontend.hooks.addAction('frontend/element_ready/os-post.default', PostSlider);
+        elementorFrontend.hooks.addAction('frontend/element_ready/os-team.default', TeamSlider);
+        elementorFrontend.hooks.addAction('frontend/element_ready/ol-slides.default', Slider);
+        elementorFrontend.hooks.addAction('frontend/element_ready/os-icon-box.default', IconBox);
+    });
+
+})(jQuery);;
