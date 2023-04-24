@@ -3,6 +3,8 @@
 <html lang="vi" prefix="og: https://ogp.me/ns#">
 
 <head>
+	<meta charset="UTF-8">
+
 	<title>Trang chủ - OSLA</title>
 
 	<style id="global-styles-inline-css" type="text/css">
@@ -1098,6 +1100,8 @@
 	class="home page-template-default page page-id-2 wp-custom-logo wp-embed-responsive elementor-default elementor-kit-6 elementor-page elementor-page-2 elementor-page-413 e--ua-blink e--ua-edge e--ua-webkit dialog-body dialog-lightbox-body dialog-container dialog-lightbox-container">
 	<!-- Your Chat Plugin code -->
 
+	<div id="root"></div>
+
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
@@ -1278,13 +1282,14 @@
 						<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-fc2cbec logo-col"
 							data-id="fc2cbec" data-element_type="column">
 							<div class="elementor-column-wrap elementor-element-populated">
-								<div class="elementor-widget-wrap">
+								<div class="elementor-widget-wrap" style="padding: 0; height: 100px;">
 									<div class="elementor-element elementor-element-c553688 elementor-widget elementor-widget-image"
 										data-id="c553688" data-element_type="widget" data-widget_type="image.default">
 										<div class="elementor-widget-container">
 											<div class="elementor-image">
 												<a href="/">
-													<img width="102" height="38" src="./index_files/logo-osla.png"
+													<img width="102" height="100" src="../2.png"
+														style="height: 100px; object-fit: contain;"
 														class="attachment-full size-full" alt="" loading="lazy" />
 												</a>
 											</div>
@@ -1293,7 +1298,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-42856b8"
+						<!-- <div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-42856b8"
 							data-id="42856b8" data-element_type="column">
 							<div class="elementor-column-wrap elementor-element-populated">
 								<div class="elementor-widget-wrap">
@@ -1310,18 +1315,19 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 						<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-10b953b search-col"
 							data-id="10b953b" data-element_type="column">
 							<div class="elementor-column-wrap elementor-element-populated">
-								<div class="elementor-widget-wrap">
+								<div class="elementor-widget-wrap"
+									style="display: flex; flex-direction: column; justify-content: center;">
 									<div class="elementor-element elementor-element-95faa2e elementor-search-form--skin-classic elementor-search-form--button-type-icon elementor-search-form--icon-search elementor-widget elementor-widget-search-form"
 										data-id="95faa2e" data-element_type="widget" data-settings='{"skin":"classic"}'
 										data-widget_type="search-form.default">
 										<div class="elementor-widget-container">
 											<form class="elementor-search-form" role="search" action="/" method="get">
 												<div class="elementor-search-form__container">
-													<input placeholder="Tìm các khóa học hoặc trường..."
+													<input placeholder="Tìm kiếm trường, nơi định cư, ..."
 														class="elementor-search-form__input" type="search" name="s"
 														title="Search" value="" />
 													<button class="elementor-search-form__submit" type="submit"
@@ -1336,101 +1342,22 @@
 								</div>
 							</div>
 						</div>
-						<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-904e564 col-lg-auto elementor-hidden-tablet elementor-hidden-phone"
-							data-id="904e564" data-element_type="column">
-							<div class="elementor-column-wrap elementor-element-populated">
-								<div class="elementor-widget-wrap">
-									<div class="elementor-element elementor-element-e50fe7a elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-										data-id="e50fe7a" data-element_type="widget"
-										data-widget_type="icon-box.default">
-										<div class="elementor-widget-container">
-											<div class="elementor-icon-box-wrapper">
-												<div class="elementor-icon-box-icon">
-													<a class="elementor-icon elementor-animation-"
-														href="https://www.facebook.com/OSLAtuvanduhoc" target="_blank">
-														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-															<g>
-																<rect fill="none" width="24" height="24"></rect>
-																<path
-																	d="M18,4H6A2,2,0,0,0,4,6V18a2,2,0,0,0,2,2h6V19H6a1,1,0,0,1-1-1V6A1,1,0,0,1,6,5H18a1,1,0,0,1,1,1V18a1,1,0,0,1-1,1H14v1h4a2,2,0,0,0,2-2V6A2,2,0,0,0,18,4Z">
-																</path>
-																<path
-																	d="M18,11V7H13a2,2,0,0,0-2,2v3H9v4h2v4h1V15H10V13h2V9a1,1,0,0,1,1-1h4v2H15a1,1,0,0,0-1,1v2h2.72l-.5,2H14v5h1V16h2l1-4H15V11Z">
-																</path>
-															</g>
-														</svg>
-													</a>
-												</div>
-												<div class="elementor-icon-box-content">
-													<h3 class="elementor-icon-box-title">
-														<a href="https://www.facebook.com/OSLAtuvanduhoc"
-															target="_blank">
-															OSLA
-														</a>
-													</h3>
-													<p class="elementor-icon-box-description">
-														Tư vấn du học và học bổng
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-5f6edfe col-lg-auto elementor-hidden-tablet elementor-hidden-phone"
-							data-id="5f6edfe" data-element_type="column">
-							<div class="elementor-column-wrap elementor-element-populated">
-								<div class="elementor-widget-wrap">
-									<div class="elementor-element elementor-element-ee861c4 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
-										data-id="ee861c4" data-element_type="widget"
-										data-widget_type="icon-box.default">
-										<div class="elementor-widget-container">
-											<div class="elementor-icon-box-wrapper">
-												<div class="elementor-icon-box-icon">
-													<a class="elementor-icon elementor-animation-"
-														href="https://www.facebook.com/OSLAIVY" target="_blank">
-														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-															<g>
-																<rect fill="none" width="24" height="24"></rect>
-																<path
-																	d="M18,4H6A2,2,0,0,0,4,6V18a2,2,0,0,0,2,2h6V19H6a1,1,0,0,1-1-1V6A1,1,0,0,1,6,5H18a1,1,0,0,1,1,1V18a1,1,0,0,1-1,1H14v1h4a2,2,0,0,0,2-2V6A2,2,0,0,0,18,4Z">
-																</path>
-																<path
-																	d="M18,11V7H13a2,2,0,0,0-2,2v3H9v4h2v4h1V15H10V13h2V9a1,1,0,0,1,1-1h4v2H15a1,1,0,0,0-1,1v2h2.72l-.5,2H14v5h1V16h2l1-4H15V11Z">
-																</path>
-															</g>
-														</svg>
-													</a>
-												</div>
-												<div class="elementor-icon-box-content">
-													<h3 class="elementor-icon-box-title">
-														<a href="https://www.facebook.com/OSLAIVY" target="_blank">
-															OSLA IVY
-														</a>
-													</h3>
-													<p class="elementor-icon-box-description">
-														Scholarships to top-tier universities
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+
+
 						<div class="elementor-column elementor-col-16 elementor-top-column elementor-element elementor-element-edc0cb6 col-lg-auto elementor-hidden-tablet elementor-hidden-phone"
 							data-id="edc0cb6" data-element_type="column">
 							<div class="elementor-column-wrap elementor-element-populated">
-								<div class="elementor-widget-wrap">
+								<div class="elementor-widget-wrap"
+									style="display: flex; flex-direction: column; justify-content: center;">
 									<div class="elementor-element elementor-element-2016d8f elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box"
 										data-id="2016d8f" data-element_type="widget"
 										data-widget_type="icon-box.default">
-										<div class="elementor-widget-container">
+										<div class="elementor-widget-container"
+											style="display: flex; justify-content: end; padding-right: 10px !important;">
 											<div class="elementor-icon-box-wrapper">
 												<div class="elementor-icon-box-icon">
 													<a class="elementor-icon elementor-animation-"
-														href="tel:+84935%20132%20929">
+														href="tel:+35196161855">
 														<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 															<g>
 																<path
@@ -1451,7 +1378,7 @@
 														<a href="tel:+84935%20132%20929"> Hotline </a>
 													</h3>
 													<p class="elementor-icon-box-description">
-														0935 132 929
+														+35196161855
 													</p>
 												</div>
 											</div>
@@ -1493,104 +1420,15 @@
 													<li
 														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-506">
 														<a href="/du-hoc-tu-tuc/" class="elementor-item has-submenu"
-															id="sm-1682014365703293-1" aria-haspopup="true"
-															aria-controls="sm-1682014365703293-2"
-															aria-expanded="false">Du học tự túc<span
-																class="sub-arrow"><i
-																	class="fas fa-caret-down"></i></span></a>
-														<ul class="sub-menu elementor-nav-menu--dropdown"
-															id="sm-1682014365703293-2" role="group" aria-hidden="true"
-															aria-labelledby="sm-1682014365703293-1"
-															aria-expanded="false">
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1848">
-																<a href="/du-hoc-uc/" class="elementor-sub-item">Du học
-																	Úc</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1849">
-																<a href="/du-hoc-new-zealand/"
-																	class="elementor-sub-item">Du học New Zealand</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1850">
-																<a href="/du-hoc-canada/" class="elementor-sub-item">Du
-																	học Canada</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1851">
-																<a href="/du-hoc-my/" class="elementor-sub-item">Du học
-																	Mỹ</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1852">
-																<a href="/du-hoc-anh/" class="elementor-sub-item">Du học
-																	Anh</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1853">
-																<a href="/du-hoc-ha-lan/" class="elementor-sub-item">Du
-																	học Hà Lan</a>
-															</li>
-														</ul>
+															id="sm-1682014365703293-1">Du học tự
+															túc</a>
+
 													</li>
 													<li
 														class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8504">
 														<a href="/hoc-bong/" class="elementor-item has-submenu"
-															id="sm-1682014365703293-3" aria-haspopup="true"
-															aria-controls="sm-1682014365703293-4"
-															aria-expanded="false">Học bổng<span class="sub-arrow"><i
-																	class="fas fa-caret-down"></i></span></a>
-														<ul class="sub-menu elementor-nav-menu--dropdown"
-															id="sm-1682014365703293-4" role="group" aria-hidden="true"
-															aria-labelledby="sm-1682014365703293-3"
-															aria-expanded="false">
-															<li
-																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057">
-																<a href="/dich-vu-ho-tro-san-hoc-bong/"
-																	class="elementor-sub-item">Dịch vụ hỗ trợ săn học
-																	bổng</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2056">
-																<a href="/tu-van-huong-nghiep-cung-chuyen-gia/"
-																	class="elementor-sub-item">Tư vấn hướng nghiệp</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8514">
-																<a href="/hoc-bong/kinh-nghiem-san-hoc-bong/"
-																	class="elementor-sub-item">Kinh nghiệm săn học
-																	bổng</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8510">
-																<a href="/hoc-bong/hoc-bong-chinh-phu-dai-hoc-thac-si-tien-si/"
-																	class="elementor-sub-item">Học bổng chính phủ (Đại
-																	Học, Thạc Sĩ, Tiến
-																	Sĩ)</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6338">
-																<a href="/hoc-bong/hoc-bong-trao-doi-ngan-han/"
-																	class="elementor-sub-item">Học bổng trao đổi ngắn
-																	hạn</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6350">
-																<a href="/hoc-bong/hoc-bong-bac-tien-si/"
-																	class="elementor-sub-item">Học bổng bậc Tiến Sĩ</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6408">
-																<a href="/hoc-bong/hoc-bong-bac-thac-si/"
-																	class="elementor-sub-item">Học bổng bậc Thạc Sĩ</a>
-															</li>
-															<li
-																class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-6347">
-																<a href="/hoc-bong/hoc-bong-bac-dai-hoc/"
-																	class="elementor-sub-item">Học bổng bậc Đại Học</a>
-															</li>
-														</ul>
+															id="sm-1682014365703293-3">Học bổng</a>
+
 													</li>
 													<li
 														class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1734">
@@ -1602,8 +1440,7 @@
 														<a href="/cac-khoa-hoc/" class="elementor-item has-submenu"
 															id="sm-1682014365703293-5" aria-haspopup="true"
 															aria-controls="sm-1682014365703293-6"
-															aria-expanded="false">Các khóa học<span class="sub-arrow"><i
-																	class="fas fa-caret-down"></i></span></a>
+															aria-expanded="false">Các khóa học</a>
 														<ul class="sub-menu elementor-nav-menu--dropdown"
 															id="sm-1682014365703293-6" role="group" aria-hidden="true"
 															aria-labelledby="sm-1682014365703293-5"
@@ -1976,10 +1813,11 @@
 																<div class="swiper-slide-inner">
 																	<div class="swiper-slide-contents">
 																		<div class="elementor-slide-heading">
-																			OSLA IVY
+																			Vista Portugal -
 																		</div>
 																		<div class="elementor-slide-description">
-																			Scholarships to top-tier universities
+																			Opportunities for Studying and Living in
+																			Portugal
 																		</div>
 																		<a href="/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMyNSIsInRvZ2dsZSI6ZmFsc2V9"
 																			class="elementor-button elementor-slide-button elementor-size-sm">Đăng
@@ -2001,11 +1839,11 @@
 																<div class="swiper-slide-inner">
 																	<div class="swiper-slide-contents">
 																		<div class="elementor-slide-heading">
-																			OSLA
+																			Vista Portugal -
 																		</div>
 																		<div class="elementor-slide-description">
-																			Opportunities for Studying and Living
-																			Abroad
+																			Accompanied to Find out Best Educations in
+																			Portugal
 																		</div>
 																		<a href="/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE3ODQiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
 																			class="elementor-button elementor-slide-button elementor-size-sm">Đăng
@@ -2027,10 +1865,11 @@
 																<div class="swiper-slide-inner">
 																	<div class="swiper-slide-contents">
 																		<div class="elementor-slide-heading">
-																			OSLA IVY
+																			Vista Portugal -
 																		</div>
 																		<div class="elementor-slide-description">
-																			Scholarships to top-tier universities
+																			Opportunities for Studying and Living in
+																			Portugal
 																		</div>
 																		<a href="/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjMyNSIsInRvZ2dsZSI6ZmFsc2V9"
 																			class="elementor-button elementor-slide-button elementor-size-sm">Đăng
@@ -2052,11 +1891,11 @@
 																<div class="swiper-slide-inner">
 																	<div class="swiper-slide-contents">
 																		<div class="elementor-slide-heading">
-																			OSLA
+																			Vista Portugal -
 																		</div>
 																		<div class="elementor-slide-description">
-																			Opportunities for Studying and Living
-																			Abroad
+																			Accompanied to Find out Best Educations in
+																			Portugal
 																		</div>
 																		<a href="/#elementor-action%3Aaction%3Dpopup%3Aopen%26settings%3DeyJpZCI6IjE3ODQiLCJ0b2dnbGUiOmZhbHNlfQ%3D%3D"
 																			class="elementor-button elementor-slide-button elementor-size-sm">Đăng
@@ -3175,12 +3014,9 @@
 																	<div class="elementor-widget-container">
 																		<div class="elementor-image">
 																			<img width="566" height="329"
-																				src="./index_files/MAP.png"
+																				src="/index_files/MAP.png"
 																				class="attachment-full size-full" alt=""
-																				loading="lazy" srcset="
-                                            /wp-content/uploads/2020/11/MAP.png         566w,
-                                            /wp-content/uploads/2020/11/MAP-300x174.png 300w
-                                          " sizes="(max-width: 566px) 100vw, 566px" />
+																				loading="lazy" />
 																		</div>
 																	</div>
 																</div>
@@ -7368,14 +7204,14 @@
 			<div class="hotline-phone-ring-circle"></div>
 			<div class="hotline-phone-ring-circle-fill"></div>
 			<div class="hotline-phone-ring-img-circle">
-				<a href="tel:84935132929" class="pps-btn-img">
+				<a href="tel:+351961618555" class="pps-btn-img">
 					<img src="./index_files/icon-1.png" alt="Số điện thoại" width="50" />
 				</a>
 			</div>
 		</div>
 		<div class="hotline-bar">
-			<a href="tel:84935132929">
-				<span class="text-hotline">+84935 132 929</span>
+			<a href="tel:+351961618555">
+				<span class="text-hotline">+351961618555</span>
 			</a>
 		</div>
 	</div>
@@ -7443,7 +7279,6 @@
 				<div class="item-thumbnail"></div>
 
 				<div class="item-content">
-					<h3 class="item-heading"></h3>
 					<ul class="item-list-meta flex">
 						<li>
 							<i class="elementor-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

@@ -23,8 +23,7 @@
   .elementor-repeater-item-e209443
   .swiper-slide-bg {
   background-color: var(--e-global-color-primary);
-  /* TODO */
-  /* background-image: url(http://myosla.com/wp-content/uploads/2020/11/banner.jpg); */
+  background-image: url("../15.png");
   background-size: cover;
 }
 .elementor-2
@@ -32,8 +31,7 @@
   .elementor-repeater-item-ecb3ff4
   .swiper-slide-bg {
   background-color: #833ca3;
-  /* TODO */
-  /* background-image: url(http://myosla.com/wp-content/uploads/2020/12/accomplishment_1920x1280.jpeg); */
+  background-image: url("../14.png");
   background-size: cover;
 }
 .elementor-2 .elementor-element.elementor-element-594637b .swiper-slide {
@@ -929,8 +927,7 @@
   > .elementor-motion-effects-container
   > .elementor-motion-effects-layer {
   background-color: #f4698a;
-  /* TODO */
-  /* background-image: url("http://myosla.com/wp-content/uploads/2020/11/MAP2.png"); */
+  background-image: url("../15.png");
   background-position: center right;
   background-repeat: no-repeat;
 }
@@ -2047,8 +2044,7 @@ body.rtl
   .elementor-testimonial {
   height: 100%;
   padding-top: 48px;
-  /* TODO */
-  /* background-image: url("http://myosla.com/wp-content/themes/osla/public/images/quote.png"); */
+  background-image: url("../14.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
