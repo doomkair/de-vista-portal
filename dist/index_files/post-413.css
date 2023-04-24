@@ -1,0 +1,76 @@
+.elementor-413
+  .elementor-element.elementor-element-e5eab80:not(
+    .elementor-motion-effects-element-type-background
+  ),
+.elementor-413
+  .elementor-element.elementor-element-e5eab80
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  /* TODO */
+  /* background-image: url("http://myosla.com/wp-content/uploads/2020/11/visao_hero-1.jpg"); */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.elementor-413
+  .elementor-element.elementor-element-e5eab80
+  > .elementor-background-overlay {
+  background-color: transparent;
+  background-image: linear-gradient(270deg, #f6f6f600 0%, #333a4180 100%);
+  opacity: 1;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+.elementor-413 .elementor-element.elementor-element-e5eab80 {
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 207px 0px 206px 0px;
+  z-index: 0;
+}
+.elementor-413
+  .elementor-element.elementor-element-1fd5c939
+  .elementor-heading-title {
+  color: #ffffff;
+  font-family: "Gentium Basic", serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 83px;
+}
+.elementor-413
+  .elementor-element.elementor-element-1fd5c939
+  > .elementor-widget-container {
+  margin: 0px 0px 0px 0px;
+}
+.elementor-413
+  .elementor-element.elementor-element-48a3fb00
+  > .elementor-element-populated
+  > .elementor-widget-wrap {
+  padding: 64px 16px 64px 16px;
+}
+.elementor-413 .elementor-element.elementor-element-7b5aa639 {
+  font-family: "Muli", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+@media (max-width: 767px) {
+  .elementor-413 .elementor-element.elementor-element-e5eab80 {
+    padding: 60px 0px 60px 0px;
+  }
+  .elementor-413
+    .elementor-element.elementor-element-1fd5c939
+    .elementor-heading-title {
+    font-size: 28px;
+    line-height: 30px;
+  }
+} /* Start custom CSS for column, class: .elementor-element-2ee9025 */
+.elementor-413 .elementor-element.elementor-element-2ee9025,
+.elementor-413
+  .elementor-element.elementor-element-2ee9025
+  .elementor-widget-wrap {
+  position: initial;
+} /* End custom CSS */
+/* Start custom CSS for section, class: .elementor-element-e5eab80 */
+.elementor-413
+  .elementor-element.elementor-element-e5eab80
+  .elementor-container {
+  position: initial;
+} /* End custom CSS */
